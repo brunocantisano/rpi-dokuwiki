@@ -1,0 +1,5 @@
+dokuwiki:
+    image: paperinik/rpi-dokuwiki
+    ports:
+        - "8000:80"
+    restart: always
