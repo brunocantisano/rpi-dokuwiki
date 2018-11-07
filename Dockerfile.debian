@@ -12,7 +12,7 @@ MAINTAINER Bruno Cardoso Cantisano <bruno.cantisano@gmail.com>
 WORKDIR /var/www/html
 
 RUN a2enmod rewrite
-RUN curl "http://download.dokuwiki.org/src/dokuwiki/dokuwiki-stable.tgz" | tar xz --strip 1
+RUN curl "https://download.dokuwiki.org/src/dokuwiki/dokuwiki-stable.tgz" | tar xz --strip 1
 RUN chown -R www-data:www-data .
 
 VOLUME /var/www/html/data/pages \

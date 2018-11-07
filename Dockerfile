@@ -20,7 +20,7 @@ RUN set -xe \
                           php5-zlib \
                           tar \
     && touch /etc/php5/fpm.d/empty.conf \
-    && wget -O- http://download.dokuwiki.org/src/dokuwiki/dokuwiki-stable.tgz | tar xz --strip 1 \
+    && wget -O- https://download.dokuwiki.org/src/dokuwiki/dokuwiki-stable.tgz | tar xz --strip 1 \
     && chown -R nobody:nobody .
 
 COPY nginx.conf /etc/nginx/nginx.conf
