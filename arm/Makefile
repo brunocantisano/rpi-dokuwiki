@@ -14,6 +14,9 @@ build:
 bash:
 	docker run --rm -it $(docker_tag) bash
 
+push:
+	docker push $(docker_tag)
+
 run:
 	$(eval ID := $(shell docker run -d ${docker_tag}))
 	$(eval IP := $(shell docker inspect --format '{{ .NetworkSettings.IPAddress }}' ${ID}))
